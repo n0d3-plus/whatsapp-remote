@@ -1,0 +1,30 @@
+{
+  "extends": "./tsconfig.json",
+    "include": [
+      "src/types/*",
+      "src/runner/worker/vm/*",
+  ],
+  "exclude": null,
+  "compilerOptions": {
+    "paths": {
+      "@*-types": [
+        "./src/types/*-types"
+      ],
+    },
+    "strict": false,
+    "strictNullChecks": false,
+    "target": "es2024",
+    // "module": "commonjs",
+    "lib": ["ES2024"],
+    // "esModuleInterop": true,
+    // "resolveJsonModule": true,
+    // "moduleResolution": "node",
+    // "outDir": "build",
+    "types": [],
+    // "types": ["src/workflow/process/vm.global.ts"],
+    // "tsBuildInfoFile": "./build/tsconfig.node.tsbuildinfo",
+    // "module": "ESNext",
+    // "moduleResolution": "Bundler",
+    // "types": ["node"]
+  }
+}

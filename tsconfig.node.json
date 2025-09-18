@@ -1,0 +1,38 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "vite.*.ts",
+    "src"
+  ],
+  "ts-node": {
+    "swc": true
+  },
+  "exclude": [
+    "src/runner/worker/vm",
+    "build",
+  ],
+  "compilerOptions": {
+    "paths": {
+      "@*-types": [
+        "./src/types/*-types"
+      ],
+      "@remote/*": ["./remote/*"],
+    },
+    "outDir": "build",
+    "isolatedModules": true,
+    "inlineSourceMap": true,
+    // "target": "es2022",
+    // "module": "preserve",
+    // "esModuleInterop": true,
+    // "resolveJsonModule": true,
+    // "moduleResolution": "node16",
+    // "outDir": "build",
+    "types": [
+      "node"
+    ],
+    "tsBuildInfoFile": "./build/tsconfig.node.tsbuildinfo",
+    // "module": "ESNext",
+    // "moduleResolution": "Bundler",
+    // "types": ["node"]
+  }
+}

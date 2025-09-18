@@ -1,0 +1,38 @@
+{
+  "exclude": [
+    // "src/workflow/process/vm",
+    ".*\\.test\\.ts$",
+    ".*\\.d\\.ts$"
+  ],
+  "jsc": {
+    "parser": {
+      "syntax": "typescript",
+      "topLevelAwait": true
+    },
+    "target": "es2024",
+    "baseUrl": "src"
+    // "baseUrl": ".",
+    // "experimental": {
+    //   "plugins": [
+    //     [
+    //       "@swc/plugin-transform-imports",
+    //       {
+    //         "^(.*?)(\\.ts)$": {
+    //           "skipDefaultConversion": true,
+    //           "transform": "{{matches.[1]}}.js"
+    //         }
+    //       }
+    //     ]
+    //   ]
+    // }
+  },
+  // "sourceMaps": false,
+  "minify": false,
+  //   "isModule": true,
+  "module": {
+    "type": "es6",
+    "preserveImportMeta": true,
+    "resolveFully": true
+    // "outFileExtension": "mjs"
+  }
+}

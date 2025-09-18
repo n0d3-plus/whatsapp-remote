@@ -1,0 +1,13 @@
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+/node_modules
+/build
+*.local
+/data
+*.tsbuildinfo
+/dist/*
+!/dist/*.zip
+/tmp
+/.old-*

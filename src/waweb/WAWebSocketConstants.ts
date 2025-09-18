@@ -1,0 +1,59 @@
+
+export enum SOCKET_STATE {
+  // first time
+  OPENING = "OPENING",
+  // Preparing QR Code
+  PAIRING = "PAIRING",
+  // QR Code Displayed
+  UNPAIRED = "UNPAIRED",
+  // Shows refresh button in QR Code
+  UNPAIRED_IDLE = "UNPAIRED_IDLE",
+  CONNECTED = "CONNECTED",
+  CONFLICT = "CONFLICT",
+  UNLAUNCHED = "UNLAUNCHED",
+  PROXYBLOCK = "PROXYBLOCK",
+  TOS_BLOCK = "TOS_BLOCK",
+  SMB_TOS_BLOCK = "SMB_TOS_BLOCK",
+  DEPRECATED_VERSION = "DEPRECATED_VERSION",
+  SCREEN_LOCKED = "SCREEN_LOCKED"
+}
+
+export enum SOCKET_STREAM {
+  DISCONNECTED = "DISCONNECTED",
+  SYNCING = "SYNCING",
+  RESUMING = "RESUMING",
+  CONNECTED = "CONNECTED"
+}
+
+// Reconstructed from: static.whatsapp.net/rsrc.php/45gqp_AtQTq.js
+/*
+__d(
+  "WAWebSocketConstants",
+  [],
+  function (a, b, c, d, e, f) {
+    a = {
+      OPENING: "OPENING",
+      PAIRING: "PAIRING",
+      UNPAIRED: "UNPAIRED",
+      UNPAIRED_IDLE: "UNPAIRED_IDLE",
+      CONNECTED: "CONNECTED",
+      CONFLICT: "CONFLICT",
+      UNLAUNCHED: "UNLAUNCHED",
+      PROXYBLOCK: "PROXYBLOCK",
+      TOS_BLOCK: "TOS_BLOCK",
+      SMB_TOS_BLOCK: "SMB_TOS_BLOCK",
+      DEPRECATED_VERSION: "DEPRECATED_VERSION",
+      SCREEN_LOCKED: "SCREEN_LOCKED",
+    };
+    b = {
+      DISCONNECTED: "DISCONNECTED",
+      SYNCING: "SYNCING",
+      RESUMING: "RESUMING",
+      CONNECTED: "CONNECTED",
+    };
+    f.SOCKET_STATE = a;
+    f.SOCKET_STREAM = b;
+  },
+  66
+);
+*/

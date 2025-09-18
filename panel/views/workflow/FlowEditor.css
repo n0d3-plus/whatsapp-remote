@@ -1,0 +1,170 @@
+/* import the necessary styles for Vue Flow to work */
+@import '@vue-flow/core/dist/style.css';
+/* import the default theme, this is optional but generally recommended */
+/* @import '@vue-flow/core/dist/theme-default.css'; */
+
+/* Core and Theme merged into this one */
+/* @import '../../assets/vueflow.css'; */
+
+/* @import '@vue-flow/controls/dist/style.css'; */
+.vue-flow .debug-panel {
+    background-color: rgb(255 255 255 / 82%);
+}
+
+.vue-flow.dark .debug-panel {
+    background-color: rgb(33 33 33 / 82%);
+}
+
+.vue-flow__panel.debug-panel {
+    will-change: height;
+    transition: height 300ms ease;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 0px;
+    transform: none;
+    margin: 0px;
+}
+
+.resize-handle {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 6px;
+    z-index: 100;
+    cursor: row-resize;
+    border-top: solid 1px #3d3d3d38;
+}
+
+.noclick {
+    pointer-events: none;
+}
+
+.dnd-overlay {
+    background-color: rgba(0, 132, 255, 0.212);
+    position: absolute;
+    font-size: xx-large;
+    color: rgb(0, 174, 255);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.nodrag {
+    cursor: initial;
+}
+
+.vue-flow {
+    background: #f0f0f0;
+}
+
+.vue-flow.dark {
+    background: #0f0f0f;
+    color: #fffffb
+}
+
+.vue-flow .vue-flow__node.selected>.v-card,
+.vue-flow .vue-flow__node.selected .vue-flow__handle {
+    border-color: #009bf5
+}
+
+/* Handle color */
+.vue-flow__handle {
+    width: 10px;
+    height: 24px;
+    background: #aaa;
+    border: solid 1px;
+    border-radius: 4px;
+    border-color: #e0e0e0;
+}
+
+.vue-flow.dark .vue-flow__handle {
+    border-color: #3f3f3f
+}
+
+.vue-flow__handle.data-type-any {
+    background: #00ffee;
+    background: linear-gradient(0deg, rgb(0, 204, 177) 0%, rgb(140, 0, 255) 50%, rgb(255, 136, 0) 95%);
+}
+
+.vue-flow__handle.data-type-message {
+    background: rgb(0, 204, 177);
+}
+
+.vue-flow__handle.data-type-text {
+    background: rgb(255, 136, 0);
+}
+
+.vue-flow__handle.data-type-binary {
+    background: rgb(140, 0, 255);
+}
+
+.vue-flow__handle-connecting {
+    background: red;
+}
+
+.vue-flow__handle-valid {
+    background: rgb(1, 175, 39);
+}
+
+.vue-flow.dark .vue-flow__edge-textbg {
+    fill: #292524
+}
+
+.vue-flow.dark .vue-flow__edge-text {
+    fill: #fffffb
+}
+
+/* ACTIO NODE */
+.vue-flow__node-action {
+    min-width: 180px;
+
+}
+.vue-flow__node-action > .v-card {
+    min-height: 100px;
+}
+
+.vue-flow__node-action .v-checkbox .v-selection-control {
+    min-height: 36px;
+}
+
+.flow-stats {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 0px;
+    translate: 0 -100%;
+    direction: rtl;
+    height: 24px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+    text-align: right;
+    text-wrap: nowrap;
+    color: rgba(var(--v-theme-on-background), var(--v-disabled-opacity));
+    /* background-color: red; */
+    /* align-content: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap; */
+}
+
+.flow-stats .flow-item {
+    direction: ltr;
+    /* border-radius: 50%; */
+    display: inline-block;
+    /* width: 24px;
+    font-size: 18px;
+    height: 24px; */
+    /* color: red; */
+    cursor: pointer;
+    margin-right: 5px;
+    /* vertical-align: middle; */
+}

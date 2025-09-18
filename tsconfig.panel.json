@@ -1,0 +1,21 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": ["panel/**/*", "panel/**/*.vue", "remote/**/*"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "strict": false,
+    "lib": [
+      "es2021",
+      "DOM",
+      "DOM.Iterable"],
+    "allowJs": true,
+    "tsBuildInfoFile": "./build/tsconfig.app.tsbuildinfo",
+    "paths": {
+      "@remote/*": ["./remote/*"],
+      "@src/*": ["./src/*"],
+      "@*-types": ["./src/types/*-types"],
+      "@*-utils": ["./src/utils/*"]
+    }
+  }
+}

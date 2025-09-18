@@ -1,0 +1,29 @@
+{
+    "files": [],
+    "compilerOptions": {
+        "target": "es2022",
+        "module": "es2022",
+        "moduleResolution": "bundler",
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "moduleDetection": "force",
+        "allowImportingTsExtensions": true,
+        "noEmit": true,
+        "skipLibCheck": true,
+        "strict": false,
+        "strictPropertyInitialization": false,
+        "noImplicitAny": false,
+        "types": []
+    },
+    "references": [
+        {
+            "path": "./tsconfig.node.json"
+        },
+        {
+            "path": "./tsconfig.panel.json",
+        },
+        {
+            "path": "./tsconfig.sandbox.json",
+        }
+    ]
+}
