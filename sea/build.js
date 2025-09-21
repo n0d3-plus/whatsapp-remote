@@ -38,6 +38,9 @@ const OSes = [
     {
         name: 'darwin-arm64', binary: '', ext: '',
         url: 'https://nodejs.org/dist/v22.19.0/node-v22.19.0-darwin-arm64.tar.gz',
+        injectAttrs: {
+            machoSegmentName: 'NODE_SEA'
+        }
     },
     {
         name: 'win-x64', binary: '', ext: '.exe',
@@ -146,7 +149,8 @@ for (const v of OSes) {
     fs.copyFileSync(v.binary, OUT_BINARY)
 
     await inject(OUT_BINARY, 'NODE_SEA_BLOB', SEA_DATA, {
-        sentinelFuse: 'NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2'
+        sentinelFuse: 'NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2',
+        ...v.injectAttrs
     })
     console.log("Created executable:", OUT_BINARY);
 }
